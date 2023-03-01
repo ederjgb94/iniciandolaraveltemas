@@ -24,4 +24,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // Route::put('/trailer/{id}', 'App\Http\Controllers\TrailerController@update');
 // Route::delete('/trailer/{id}', 'App\Http\Controllers\TrailerController@destroy');
 
-Route::apiResource('trailer', 'App\Http\Controllers\TrailerController');
+Route::apiResource('trailers', 'App\Http\Controllers\TrailerController');

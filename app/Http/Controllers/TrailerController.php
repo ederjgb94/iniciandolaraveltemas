@@ -41,7 +41,7 @@ class TrailerController extends Controller
      */
     public function show(Trailer $trailer)
     {
-        //
+        return $trailer;
     }
 
     /**
@@ -53,7 +53,10 @@ class TrailerController extends Controller
      */
     public function update(Request $request, Trailer $trailer)
     {
-        //
+        $trailer->dimension = $request->dimension;
+        $trailer->peso = $request->peso;
+        $trailer->save();
+        return 'Trailer actualizado';
     }
 
     /**
@@ -64,6 +67,7 @@ class TrailerController extends Controller
      */
     public function destroy(Trailer $trailer)
     {
-        //
+        $trailer->delete();
+        return 'Trailer eliminado';
     }
 }
