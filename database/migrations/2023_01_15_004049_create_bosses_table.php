@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('trailers', function (Blueprint $table) {
+        Schema::create('bosses', function (Blueprint $table) {
             $table->id();
-            $table->string('dimension');
-            $table->decimal('peso');
-            $table->foreignId('boss_id')->constrained();
+            $table->string('nombre');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trailers');
+        Schema::dropIfExists('bosses');
     }
 };

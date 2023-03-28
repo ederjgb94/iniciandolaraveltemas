@@ -20,6 +20,7 @@ class TrailerFactory extends Factory
         return [
             'dimension' => $arreglo[array_rand($arreglo)],
             'peso' => fake()->randomFloat(2, 0, 999999.99),
+            'boss_id' => fake()->numberBetween(1, 10),
         ];
     }
 }
