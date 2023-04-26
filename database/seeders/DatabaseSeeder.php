@@ -22,5 +22,6 @@ class DatabaseSeeder extends Seeder
         // ]);
         \App\Models\Boss::factory(10)->create();
         \App\Models\Trailer::factory(20)->create();
+        \App\Models\Perro::factory(20)->create();
     }
 }

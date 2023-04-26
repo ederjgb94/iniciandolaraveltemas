@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::get('/prueba', function () {
     return view('prueba');
 });
+
+Route::resource('/perros', 'App\Http\Controllers\PerroController');
