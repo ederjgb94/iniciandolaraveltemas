@@ -25,3 +25,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // Route::delete('/trailer/{id}', 'App\Http\Controllers\TrailerController@destroy');
 
 Route::apiResource('trailers', 'App\Http\Controllers\TrailerController');
+
+// Route::get('/productos', 'App\Http\Controllers\ProductoController@index');
+// Route::get('/productos/{producto}', 'App\Http\Controllers\ProductoController@show');
+
+
+Route::apiResource('productos', 'App\Http\Controllers\ProductoController');
