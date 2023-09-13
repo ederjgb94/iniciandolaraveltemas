@@ -25,11 +25,15 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        $producto = new Producto();
-        $producto->barras = $request->barras;
-        $producto->precio = $request->precio;
-        $producto->save();
-        return $producto;
+        // Forma no masiva
+        // $producto = new Producto();
+        // $producto->barras = $request->barras;
+        // $producto->precio = $request->precio;
+        // $producto->save();
+        // return $producto;
+
+        // Forma masiva
+        return Producto::create($request->all());
     }
 
     /**
@@ -52,10 +56,14 @@ class ProductoController extends Controller
      */
     public function update(Request $request, Producto $producto)
     {
-        //pendiente poner asignación masiva
-        $producto->barras = $request->barras;
-        $producto->precio = $request->precio;
-        $producto->update();
+        // actualización no masiva
+        // $producto->barras = $request->barras;
+        // $producto->precio = $request->precio;
+        // $producto->update();
+        // return $producto;
+
+        // actualización masiva
+        $producto->update($request->all());
         return $producto;
     }
 

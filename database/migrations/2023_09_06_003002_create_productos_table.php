@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
             $table->string('barras');
-            $table->decimal('precio');
+            $table->decimal('precio')->default(0.00);
             $table->timestamps();
         });
     }
