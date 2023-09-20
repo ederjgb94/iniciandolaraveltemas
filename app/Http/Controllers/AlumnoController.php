@@ -61,4 +61,9 @@ class AlumnoController extends Controller
     {
         //
     }
+
+    public function escuela(Alumno $alumno)
+    {
+        return $alumno->escuela;
+    }
 }

@@ -17,7 +17,9 @@ class AlumnoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nombre' => $this->faker->name(),
+            'apellidos' => $this->faker->lastName(),
+            'escuela_id' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

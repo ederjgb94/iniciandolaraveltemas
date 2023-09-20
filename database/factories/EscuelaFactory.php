@@ -17,7 +17,12 @@ class EscuelaFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nombre' => $this->faker->name(),
+            'direccion' => $this->faker->address(),
+            'telefono' => $this->faker->phoneNumber(),
+            'email' => $this->faker->email(),
+            'director' => $this->faker->name(),
+            'codigopostal' => $this->faker->postcode(),
         ];
     }
 }

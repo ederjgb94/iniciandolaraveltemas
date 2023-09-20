@@ -28,5 +28,7 @@ class DatabaseSeeder extends Seeder
         // \App\Models\Perro::factory(20)->create();
 
         \App\Models\Producto::factory(10)->create();
+        \App\Models\Escuela::factory(10)->create();
+        \App\Models\Alumno::factory(100)->create();
     }
 }

@@ -31,3 +31,9 @@ Route::apiResource('trailers', 'App\Http\Controllers\TrailerController');
 
 
 Route::apiResource('productos', 'App\Http\Controllers\ProductoController');
+
+//ruta para obtener de un alumno su escuela
+Route::get('/alumnos/{alumno}/escuela', 'App\Http\Controllers\AlumnoController@escuela');
+
+//ruta para obtener los alumnos de una escuela
+Route::get('/escuelas/{escuela}/alumnos', 'App\Http\Controllers\EscuelaController@alumnos');

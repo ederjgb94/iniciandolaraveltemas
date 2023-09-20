@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('telefono');
             $table->string('email');
             $table->string('director');
-            $table->integer('codigopostal')->max(5);
+            $table->string('codigopostal')->max(5);
             $table->timestamps();
         });
     }
