@@ -37,3 +37,8 @@ Route::get('/alumnos/{alumno}/escuela', 'App\Http\Controllers\AlumnoController@e
 
 //ruta para obtener los alumnos de una escuela
 Route::get('/escuelas/{escuela}/alumnos', 'App\Http\Controllers\EscuelaController@alumnos');
+
+Route::post(
+    '/escuelas/{escuela}/alumnos/{alumno}',
+    'App\Http\Controllers\EscuelaController@guardarAlumno'
+);

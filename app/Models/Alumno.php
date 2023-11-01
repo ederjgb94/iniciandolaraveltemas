@@ -9,8 +9,13 @@ class Alumno extends Model
 {
     use HasFactory;
 
-    function escuela()
+    protected $fillable = [
+        'nombre',
+        'apellidos',
+    ];
+
+    function escuelas()
     {
-        return $this->belongsTo(Escuela::class);
+        return $this->belongsToMany(Escuela::class, 'escuelas_alumnos');
     }
 }

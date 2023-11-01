@@ -17,6 +17,11 @@ class ProductoController extends Controller
         return Producto::all();
     }
 
+    public function verTodos()
+    {
+        return view('productos.ver_productos', ['productos' => Producto::all()]);
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -76,5 +81,10 @@ class ProductoController extends Controller
     public function destroy(Producto $producto)
     {
         return $producto->delete();
+    }
+
+    public function editar(Producto $producto)
+    {
+        return view('productos.editar_productos', ['producto' => $producto]);
     }
 }
