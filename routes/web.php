@@ -29,8 +29,15 @@ Route::get('/productos/edit', 'App\Http\Controllers\ProductoController@editar')
     ->name('productos.edit');
 
 
-Route::get('/escuelas', 'App\Http\Controllers\EscuelaController@verEscuelas');
+Route::get('/escuelas', 'App\Http\Controllers\EscuelaController@verEscuelas')
+    ->name('escuelas.index');
 Route::get('/escuelas/editar/{escuela}', 'App\Http\Controllers\EscuelaController@editar')
     ->name('escuelas.edit');
 
 Route::put('/escuelas/editar/{escuela}/update', 'App\Http\Controllers\EscuelaController@update')->name('escuelas.update');
+
+Route::get('/escuelas/crear', 'App\Http\Controllers\EscuelaController@create')
+    ->name('escuelas.create');
+
+Route::post('/escuelas/guardar', 'App\Http\Controllers\EscuelaController@store')
+    ->name('escuelas.crear');

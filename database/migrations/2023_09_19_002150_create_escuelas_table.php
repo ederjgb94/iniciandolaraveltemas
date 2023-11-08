@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('escuelas', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->string('direccion');
-            $table->string('telefono');
-            $table->string('email');
-            $table->string('director');
+            $table->string('direccion')->nullable();
+            $table->string('telefono')->nullable();
+            $table->string('email')->nullable();
+            $table->string('director')->nullable();
             $table->string('codigopostal')->max(5);
             $table->timestamps();
         });

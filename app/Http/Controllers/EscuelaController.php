@@ -27,7 +27,11 @@ class EscuelaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $escuela = Escuela::create($request->all());
+        return view('mostrar_mensaje', [
+            'mensaje' => 'Escuela creada correctamente ' . $escuela->nombre,
+            'ruta' => 'escuelas.index',
+        ],);
     }
 
     /**
@@ -50,7 +54,11 @@ class EscuelaController extends Controller
      */
     public function update(Request $request, Escuela $escuela)
     {
-        return "Hola desde el controlador update";
+        $escuela->update($request->all());
+        return view('mostrar_mensaje', [
+            'mensaje' => 'Escuela actualizada correctamente ' . $escuela->nombre,
+            'ruta' => 'escuelas.index',
+        ],);
     }
 
     /**
@@ -89,5 +97,10 @@ class EscuelaController extends Controller
             'escuela' => $escuela,
 
         ],);
+    }
+
+    public function create()
+    {
+        return View('escuelas.crear_escuela');
     }
 }
