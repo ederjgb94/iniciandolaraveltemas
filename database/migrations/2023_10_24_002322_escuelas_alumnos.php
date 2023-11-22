@@ -24,7 +24,7 @@ return new class extends Migration
                 //FORMA EXPLICITA
                 $table->unsignedBigInteger('escuela_id');
                 $table->foreign('escuela_id')
-                    ->references('id')->on('escuelas');
+                    ->references('id')->on('escuelas')->cascadeOnDelete();
             }
         );
     }

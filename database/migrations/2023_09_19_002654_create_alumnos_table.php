@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('apellidos');
 
-            $table->foreignId('escuela_id')->constrained();
+            // $table->foreignId('escuela_id')->constrained();
 
             //AQUI SE VEN DOS FORMAS DE PONER RELACIONES EN TABLAS
             // $table->unsignedBigInteger('escuelaid');

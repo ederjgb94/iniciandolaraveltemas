@@ -103,4 +103,14 @@ class EscuelaController extends Controller
     {
         return View('escuelas.crear_escuela');
     }
+
+    public function eliminar(Escuela $escuela)
+    {
+        $escuela->delete();
+
+        return view('mostrar_mensaje', [
+            'mensaje' => 'Escuela eliminada correctamente ' . $escuela->nombre,
+            'ruta' => 'escuelas.index',
+        ],);
+    }
 }

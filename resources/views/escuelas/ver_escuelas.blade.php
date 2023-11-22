@@ -10,5 +10,6 @@
             <button type="submit" class="btn btn-danger">Eliminar</button>
         </form> --}}
         <a href="{{ route('escuelas.edit', $escuela) }}" class="btn btn-warning">Editar</a>
+        <a href="{{ route('escuelas.eliminar', $escuela) }}" class="btn btn-danger">Eliminar</a>
     @endforeach
 @endsection

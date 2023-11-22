@@ -30,5 +30,9 @@ class DatabaseSeeder extends Seeder
         \App\Models\Producto::factory(10)->create();
         \App\Models\Escuela::factory(10)->create();
         \App\Models\Alumno::factory(100)->create();
+
+        // agregar alumnos a la escuela con el id 1
+        \App\Models\Escuela::find(1)->alumnos()->attach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+        \App\Models\Escuela::find(2)->alumnos()->attach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
     }
 }

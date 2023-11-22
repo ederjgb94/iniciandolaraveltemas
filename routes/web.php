@@ -41,3 +41,6 @@ Route::get('/escuelas/crear', 'App\Http\Controllers\EscuelaController@create')
 
 Route::post('/escuelas/guardar', 'App\Http\Controllers\EscuelaController@store')
     ->name('escuelas.crear');
+
+Route::get('/escuelas/eliminar/{escuela}', 'App\Http\Controllers\EscuelaController@eliminar')
+    ->name('escuelas.eliminar');
